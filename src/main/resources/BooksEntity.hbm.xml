@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="dao.BooksEntity" table="BOOKS" schema="USER_NAME">
+        <id name="boorId">
+            <column name="BOOR_ID" sql-type="number(*)" precision="2147483646"/>
+        </id>
+        <property name="bookTitle">
+            <column name="BOOK_TITLE" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="bookDescription">
+            <column name="BOOK_DESCRIPTION" sql-type="varchar2(255)" not-null="true"/>
+        </property>
+        <property name="boolAuthor">
+            <column name="BOOL_AUTHOR" sql-type="varchar2(100)" length="100" not-null="true"/>
+        </property>
+        <property name="bookIsbn">
+            <column name="BOOK_ISBN" sql-type="varchar2(20)" length="20" not-null="true"/>
+        </property>
+        <property name="bookPrintyear">
+            <column name="BOOK_PRINTYEAR" sql-type="number(*)" precision="2147483646" not-null="true"/>
+        </property>
+        <property name="bookReadalready">
+            <column name="BOOK_READALREADY" sql-type="char(1)" length="1"/>
+        </property>
+    </class>
+</hibernate-mapping>
