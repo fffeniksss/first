@@ -8,18 +8,17 @@ import util.SessionFactoryUtil;
 public class AppMain {
     public static void main(String[] args) {
         CRUDimpl cruDimpl=new CRUDimpl();
-        cruDimpl.delete(1);
-        cruDimpl.delete(3);
-        cruDimpl.delete(4);
-        /*System.out.printf("creating");
+
+        System.out.printf("creating");
         BooksEntity booksEntityCreating=new BooksEntity(2,"title book2","description book2","author book2",
                 "isbn book2", (long) 1984,"n");
         BooksEntity booksEntityCreating3=new BooksEntity(3,"title book2","description book2","author book2",
                 "isbn book2", (long) 1984,"n");
         BooksEntity booksEntityCreating4=new BooksEntity(4,"title book2","description book2","author book2",
                 "isbn book2", (long) 1984,"n");
+        cruDimpl.create(booksEntityCreating);
         /////////////////////////////////////////////////
-        System.out.println("reading");
+       /* System.out.println("reading");
         cruDimpl.read((long)1);
         System.out.println(cruDimpl.fountById(1));
         //////////////////////////////
